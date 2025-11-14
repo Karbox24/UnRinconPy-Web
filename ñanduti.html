@@ -1,31 +1,227 @@
-<div>
-    <h2>El Misterio del Ñandutí: Más que un Encaje, una Leyenda Viva</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Misterio del Ñandutí | Un Rincón Py</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- ESTILOS COPIADOS DE INDEX.HTML --- */
+        :root {
+            --color-rojo: #D52B1E;
+            --color-blanco: #FFFFFF;
+            --color-azul: #0038A8;
+            --color-texto: #333333;
+            --color-fondo-footer: #f8f9fa;
+        }
 
-    <p>En el corazón de Sudamérica, <strong>Paraguay</strong> atesora una de las expresiones artesanales más delicadas y fascinantes del continente: el <strong>ñandutí</strong>. Este encaje, cuyo nombre en guaraní significa <strong>"tela de araña"</strong>, es mucho más que un simple tejido; es un símbolo de identidad, una manifestación artística transmitida de generación en generación y el protagonista de una leyenda poética que narra su origen. Acompáñanos a desenredar los hilos de esta maravillosa tradición.</p>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <h2>Una leyenda tejida con amor y cabellos de plata</h2>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--color-blanco);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
 
-    <p>La historia del ñandutí está envuelta en el misterio de las <strong>leyendas guaraníes</strong>. Una de las más populares cuenta que dos jóvenes guerreros guaraníes competían por el amor de una bella doncella. Uno de ellos, desesperado por encontrar un regalo que superara a todos los demás, se adentró en la selva. Allí, en lo alto de un árbol, vio un encaje tan perfecto y brillante que parecía tejido con la propia luz de la luna. Era una telaraña.</p>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    <p>Al intentar tomarla, el frágil tejido se deshizo entre sus dedos. Apesadumbrado, el guerrero le contó a su madre lo sucedido. La anciana, conmovida por la tristeza de su hijo, se propuso replicar la belleza de la telaraña. Con infinita paciencia y utilizando sus propios cabellos blancos como hilos, imitó los movimientos de la araña, creando así el primer ñandutí.</p>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
-    <h2>La paciencia y destreza de las artesanas</h2>
+        /* Cabecera */
+        .site-header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid #eee;
+        }
 
-    <p>Inspirado en esa leyenda, el proceso de elaboración del ñandutí es un testimonio de <strong>paciencia y habilidad</strong>. Las artesanas, principalmente mujeres, aprenden la técnica desde niñas, observando a sus madres y abuelas. El trabajo comienza tensando una tela sobre un <strong>bastidor de madera</strong>. Sobre esta base, se trazan los diseños con hilos que forman una urdimbre radial, similar a los radios de una rueda.</p>
+        .site-header .logo {
+            font-size: 2.8rem;
+            color: var(--color-azul);
+            font-weight: 700;
+            margin: 0;
+        }
 
-    <p>Luego, con una aguja y finísimos hilos de algodón o seda, se van rellenando los espacios, creando complejas figuras geométricas y caladas. Una vez completado el diseño, el tejido se almidona para darle rigidez y finalmente se separa con cuidado de la tela base.</p>
+        .site-header .subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
 
-    <h2>Un reflejo de la naturaleza paraguaya</h2>
+        /* Navegación */
+        .main-nav {
+            background-color: var(--color-blanco);
+            padding: 15px 0;
+            text-align: center;
+        }
 
-    <p>Cada diseño en el ñandutí tiene un significado y una conexión profunda con el <strong>entorno natural</strong> de Paraguay. Las formas circulares y los patrones geométricos se inspiran en elementos de la <strong>flora y la fauna local</strong>. Es común encontrar representaciones estilizadas de flores como el <strong>mburucuyá</strong> (la flor de la pasión), animales e incluso motivos que simbolizan el sol y la armonía del cosmos. Esta rica simbología convierte a cada pieza de ñandutí en un pequeño mapa de la biodiversidad y la cosmovisión guaraní.</p>
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-    <h2>Itauguá, la cuna del ñandutí</h2>
+        .main-nav a {
+            text-decoration: none;
+            color: var(--color-azul);
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-    <p>Si bien se produce en varias localidades, la ciudad de <strong>Itauguá</strong>, ubicada a unos 30 kilómetros de Asunción, es reconocida como la <strong>capital indiscutible del ñandutí</strong>. Sus calles están llenas de talleres y tiendas donde se puede observar a las artesanas en plena faena y adquirir piezas únicas. Cada año, la ciudad celebra el <strong>Festival Nacional del Ñandutí</strong>, un evento que rinde homenaje a esta artesanía y atrae a visitantes de todo el mundo, consolidando su importancia cultural y económica para la región.</p>
+        .main-nav a:hover {
+            background-color: var(--color-rojo);
+            color: var(--color-blanco);
+        }
 
-    <h2>Tradición que se reinventa en la modernidad</h2>
+        /* Contenido del Artículo */
+        main {
+            padding: 40px 0;
+        }
 
-    <p>Lejos de ser una reliquia del pasado, el ñandutí ha sabido adaptarse a los nuevos tiempos. Si bien tradicionalmente se utilizaba para ornamentos religiosos, mantelería y detalles en trajes típicos, hoy su versatilidad ha conquistado el mundo de la <strong>moda y la decoración</strong> contemporánea.</p>
+        /* Estilos específicos para el contenido de un artículo */
+        .article-content {
+            max-width: 800px; /* Ancho cómodo para lectura */
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    <p>Diseñadores paraguayos han incorporado este encaje en prendas de alta costura, dándole un toque de elegancia y sofisticación. También es posible encontrarlo en accesorios modernos como aros, collares, sombreros y abanicos, así como en innovadores artículos para la decoración del hogar. Esta capacidad de reinventarse asegura que la delicada belleza de la "tela de araña" paraguaya continuará cautivando al mundo por muchos años más.</p>
-</div>
+        .article-content h2 {
+            font-size: 2rem;
+            color: var(--color-rojo);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .article-content h3 {
+             font-size: 1.5rem;
+             color: var(--color-azul);
+             margin-top: 25px;
+             margin-bottom: 10px;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .article-content strong {
+            font-weight: 700;
+            color: var(--color-azul);
+        }
+
+        /* Pie de Página */
+        .site-footer {
+            background-color: var(--color-fondo-footer);
+            color: #6c757d;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+        }
+
+        .site-footer a {
+            color: var(--color-azul);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .site-header .logo {
+                font-size: 2.2rem;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html" style="text-decoration: none; color: var(--color-azul);">Un Rincón Py</a></h1>
+            <p class="subtitle">Curiosidades del Corazón de América</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html#cultura">Cultura</a></li>
+            <li><a href="index.html#historia">Historia</a></li>
+            <li><a href="index.html#gastronomia">Gastronomía</a></li>
+            <li><a href="index.html#turismo">Turismo</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <article class="article-content">
+            <h2>El Misterio del Ñandutí: Más que un Encaje, una Leyenda Viva</h2>
+
+            <p>En el corazón de Sudamérica, <strong>Paraguay</strong> atesora una de las expresiones artesanales más delicadas y fascinantes del continente: el <strong>ñandutí</strong>. Este encaje, cuyo nombre en guaraní significa <strong>"tela de araña"</strong>, es mucho más que un simple tejido; es un símbolo de identidad, una manifestación artística transmitida de generación en generación y el protagonista de una leyenda poética que narra su origen. Acompáñanos a desenredar los hilos de esta maravillosa tradición.</p>
+
+            <h3>Una leyenda tejida con amor y cabellos de plata</h3>
+
+            <p>La historia del ñandutí está envuelta en el misterio de las <strong>leyendas guaraníes</strong>. Una de las más populares cuenta que dos jóvenes guerreros guaraníes competían por el amor de una bella doncella. Uno de ellos, desesperado por encontrar un regalo que superara a todos los demás, se adentró en la selva. Allí, en lo alto de un árbol, vio un encaje tan perfecto y brillante que parecía tejido con la propia luz de la luna. Era una telaraña.</p>
+
+            <p>Al intentar tomarla, el frágil tejido se deshizo entre sus dedos. Apesadumbrado, el guerrero le contó a su madre lo sucedido. La anciana, conmovida por la tristeza de su hijo, se propuso replicar la belleza de la telaraña. Con infinita paciencia y utilizando sus propios cabellos blancos como hilos, imitó los movimientos de la araña, creando así el primer ñandutí.</p>
+
+            <h3>La paciencia y destreza de las artesanas</h3>
+
+            <p>Inspirado en esa leyenda, el proceso de elaboración del ñandutí es un testimonio de <strong>paciencia y habilidad</strong>. Las artesanas, principalmente mujeres, aprenden la técnica desde niñas, observando a sus madres y abuelas. El trabajo comienza tensando una tela sobre un <strong>bastidor de madera</strong>. Sobre esta base, se trazan los diseños con hilos que forman una urdimbre radial, similar a los radios de una rueda.</p>
+
+            <p>Luego, con una aguja y finísimos hilos de algodón o seda, se van rellenando los espacios, creando complejas figuras geométricas y caladas. Una vez completado el diseño, el tejido se almidona para darle rigidez y finalmente se separa con cuidado de la tela base.</p>
+
+            <h3>Un reflejo de la naturaleza paraguaya</h3>
+
+            <p>Cada diseño en el ñandutí tiene un significado y una conexión profunda con el <strong>entorno natural</strong> de Paraguay. Las formas circulares y los patrones geométricos se inspiran en elementos de la <strong>flora y la fauna local</strong>. Es común encontrar representaciones estilizadas de flores como el <strong>mburucuyá</strong> (la flor de la pasión), animales e incluso motivos que simbolizan el sol y la armonía del cosmos. Esta rica simbología convierte a cada pieza de ñandutí en un pequeño mapa de la biodiversidad y la cosmovisión guaraní.</p>
+
+            <h3>Itauguá, la cuna del ñandutí</h3>
+
+            <p>Si bien se produce en varias localidades, la ciudad de <strong>Itauguá</strong>, ubicada a unos 30 kilómetros de Asunción, es reconocida como la <strong>capital indiscutible del ñandutí</strong>. Sus calles están llenas de talleres y tiendas donde se puede observar a las artesanas en plena faena y adquirir piezas únicas. Cada año, la ciudad celebra el <strong>Festival Nacional del Ñandutí</strong>, un evento que rinde homenaje a esta artesanía y atrae a visitantes de todo el mundo, consolidando su importancia cultural y económica para la región.</p>
+
+            <h3>Tradición que se reinventa en la modernidad</h3>
+
+            <p>Lejos de ser una reliquia del pasado, el ñandutí ha sabido adaptarse a los nuevos tiempos. Si bien tradicionalmente se utilizaba para ornamentos religiosos, mantelería y detalles en trajes típicos, hoy su versatilidad ha conquistado el mundo de la <strong>moda y la decoración</strong> contemporánea.</p>
+
+            <p>Diseñadores paraguayos han incorporado este encaje en prendas de alta costura, dándole un toque de elegancia y sofisticación. También es posible encontrarlo en accesorios modernos como aros, collares, sombreros y abanicos, así como en innovadores artículos para la decoración del hogar. Esta capacidad de reinventarse asegura que la delicada belleza de la "tela de araña" paraguaya continuará cautivando al mundo por muchos años más.</p>
+            </article>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Un Rincón Py. Todos los derechos reservados. | <a href="#contacto">Contacto</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
