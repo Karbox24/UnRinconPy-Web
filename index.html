@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Rincón Py - Curiosidades del Corazón de América</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Reset y Estilos Globales --- */
+        :root {
+            --color-rojo: #D52B1E;
+            --color-blanco: #FFFFFF;
+            --color-azul: #0038A8;
+            --color-texto: #333333;
+            --color-fondo-footer: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--color-blanco);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- Cabecera (Header) --- */
+        .site-header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .site-header .logo {
+            font-size: 2.8rem;
+            color: var(--color-azul);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .site-header .subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        /* --- Navegación (Nav) --- */
+        .main-nav {
+            background-color: var(--color-blanco);
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: var(--color-azul);
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            background-color: var(--color-rojo);
+            color: var(--color-blanco);
+        }
+
+        /* --- Contenido Principal (Main) --- */
+        main {
+            padding: 40px 0;
+        }
+
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .welcome-section h2 {
+            font-size: 2.5rem;
+            color: var(--color-texto);
+            margin-bottom: 15px;
+        }
+
+        .welcome-section p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        /* --- Artículos Destacados --- */
+        .featured-articles {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+        }
+
+        .article-card {
+            background-color: var(--color-blanco);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex-basis: 300px; /* Ancho base de cada tarjeta */
+            flex-grow: 1;
+            max-width: 350px; /* Ancho máximo para evitar que se estiren demasiado */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee; /* Color de fondo mientras carga la imagen */
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            font-size: 1.4rem;
+            color: var(--color-rojo);
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* --- Pie de Página (Footer) --- */
+        .site-footer {
+            background-color: var(--color-fondo-footer);
+            color: #6c757d;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+        }
+
+        .site-footer a {
+            color: var(--color-azul);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Media Queries para Responsividad --- */
+        @media (max-width: 768px) {
+            .site-header .logo {
+                font-size: 2.2rem;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .welcome-section h2 {
+                font-size: 2rem;
+            }
+
+            .featured-articles {
+                flex-direction: column;
+                align-items: center; /* Centra las tarjetas cuando están en columna */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Cabecera -->
+    <header class="site-header">
+        <div class="container">
+            <h1 class="logo">Un Rincón Py</h1>
+            <p class="subtitle">Curiosidades del Corazón de América</p>
+        </div>
+    </header>
+
+    <!-- 2. Menú de Navegación -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#cultura">Cultura</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#gastronomia">Gastronomía</a></li>
+            <li><a href="#turismo">Turismo</a></li>
+        </ul>
+    </nav>
+
+    <!-- 3. Sección Principal -->
+    <main class="container">
+        
+        <section class="welcome-section">
+            <h2>¡Bienvenidos a nuestro rincón paraguayo!</h2>
+            <p>
+                Explora con nosotros la riqueza cultural, la fascinante historia y los sabores únicos
+                de Paraguay. Un espacio dedicado a descubrir y compartir las maravillas de esta tierra guaraní.
+            </p>
+        </section>
+
+        <section class="featured-articles">
+            <!-- Tarjeta de Artículo 1 -->
+            <article class="article-card">
+                <img src="https://via.placeholder.com/400x250/0038A8/FFFFFF?text=Cultura" alt="Imagen representativa de la cultura paraguaya" class="card-image">
+                <div class="card-content">
+                    <h3>El Arte del Ñandutí</h3>
+                    <p>Descubre la historia y la belleza detrás de este icónico encaje paraguayo, tejido a mano con hilos que cuentan leyendas.</p>
+                </div>
+            </article>
+
+            <!-- Tarjeta de Artículo 2 -->
+            <article class="article-card">
+                <img src="https://via.placeholder.com/400x250/D52B1E/FFFFFF?text=Gastronomía" alt="Plato de chipa guazú" class="card-image">
+                <div class="card-content">
+                    <h3>Sabores que Enamoran: La Chipa Guazú</h3>
+                    <p>Te enseñamos a preparar este delicioso pastel de maíz, un plato que no puede faltar en ninguna mesa tradicional paraguaya.</p>
+                </div>
+            </article>
+
+            <!-- Tarjeta de Artículo 3 -->
+            <article class="article-card">
+                <img src="https://via.placeholder.com/400x250/6c757d/FFFFFF?text=Turismo" alt="Paisaje de las dunas de San Cosme y Damián" class="card-image">
+                <div class="card-content">
+                    <h3>Un Oasis en el Sur: Dunas de San Cosme</h3>
+                    <p>Viaja con nosotros a un destino mágico, donde las dunas de arena blanca emergen de las aguas del río Paraná.</p>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- 4. Pie de Página -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Un Rincón Py. Todos los derechos reservados. | <a href="#contacto">Contacto</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
